@@ -77,4 +77,9 @@ describe('Telegram Client Initialization and Authentication', () => {
 
     expect(process.stdin.resume).toHaveBeenCalled();
   });
+
+  test('should handle invalid phone number', async () => {
+    input.text.mockResolvedValueOnce('invalid_number');
+    await expect(client.start()).rejects.toThrow('Invalid phone number');
+  });
 });

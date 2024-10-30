@@ -69,3 +69,14 @@ npm test
 ```
 
 This will execute the test suite located in `src/tests/test_main.js`, which includes tests for the Telegram client initialization and authentication.
+
+## API Endpoints
+
+### POST /createGroup
+
+- **Description**: Creates a new Telegram group.
+- **Parameters**:
+  - `name`: Name of the group.
+  - `type`: Type of the group.
+- **Response**:
+  - `link`: Invite link to the group.
