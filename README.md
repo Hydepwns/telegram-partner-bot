@@ -28,9 +28,11 @@ Use the `.env.example` placeholders as a guide.
 
 1. **Copy the Template**: Duplicate the `.env.example` file and rename it to `.env`.
 
-2. **Fill in the Values**: See comments.
+2. **Fill in the Values**: See comments. **Warning**: Setting the `API_ID` and `API_HASH` allows the bot to access your Telegram account and perform actions on your behalf. Ensure these values are kept secure.
 
 3. **Secure the File**: Ensure that the `.env` file is added to your `.gitignore` to prevent it from being committed to version control.
+
+**Where to Obtain API_ID and API_HASH**: You can obtain these values by creating a new application on the [Telegram API Development Tools](https://my.telegram.org/apps) page. Follow the instructions to register your application and receive your `API_ID` and `API_HASH`.
 
 ### Running the Application
 

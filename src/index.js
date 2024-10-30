@@ -45,13 +45,21 @@ async function generateSession() {
 
   client.addEventHandler(async (event) => {
     const message = event.message;
-    if (message.text.startsWith('/set')) {
+    if (message.text.startsWith('/start')) {
+      await message.reply(
+        'Welcome! Here are the available commands:\n' +
+        '/set <key> <value> - Update configuration values\n\n' +
+        '**Warning**: Setting the `API_ID` and `API_HASH` allows the bot to access your Telegram account and perform actions on your behalf. ' +
+        'Ensure these values are kept secure.\n\n' +
+        'You can obtain these values by creating a new application on the Telegram API Development Tools page: https://my.telegram.org/apps'
+      );
+    } else if (message.text.startsWith('/set')) {
       const [command, key, value] = message.text.split(' ');
       if (key && value) {
         process.env[key.toUpperCase()] = value;
         await message.reply(`Configuration updated: ${key} = ${value}`);
       } else {
-        await message.reply('Usage: /set <key> <value>');
+        await message.reply('Usage: /set API_ID API_HASH');
       }
     }
   });
