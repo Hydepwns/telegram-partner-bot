@@ -20,6 +20,7 @@ const stringSession = new StringSession(process.env.STRING_SESSION);
     onError: (err) => console.log(err),
   });
 
+  // Event handler for processing incoming messages
   client.addEventHandler(async (event) => {
     const message = event.message;
     if (message.text.startsWith('/set')) {

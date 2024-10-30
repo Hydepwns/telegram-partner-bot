@@ -17,8 +17,8 @@ async function createGroup(groupName) {
 
     return inviteLink;
   } catch (error) {
-    console.error("Error creating group:", error.message);
-    throw error;
+    console.error("Error creating group:", error.message, error.stack);
+    throw new Error("Failed to create group. Please try again later.");
   }
 }
 
