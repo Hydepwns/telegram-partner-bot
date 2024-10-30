@@ -1,13 +1,15 @@
 const { TelegramClient } = require("telegram");
 const { StringSession } = require("telegram/sessions");
 const input = require("input");
+const dotenv = require('dotenv');
+dotenv.config();
 
-const apiId = 17883771; // Replace with your API ID
-const apiHash = ""; // Replace with your API Hash
-const stringSession23 = new StringSession(""); // Initialize with session data
+const apiId = process.env.API_ID; // Use environment variable
+const apiHash = process.env.API_HASH; // Use environment variable
+const stringSession = new StringSession(process.env.STRING_SESSION); // Use environment variable
 
 async function initializeTelegramClient() {
-  return new TelegramClient(stringSession23, apiId, apiHash, {
+  return new TelegramClient(stringSession, apiId, apiHash, {
     connectionRetries: 5,
   });
 }

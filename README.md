@@ -1,3 +1,5 @@
+# telegram-partner-bot
+
 // Credit to github.com/nbmsacha for initial implementation.
 
 Use the `.env.example` placeholders as a guide.
