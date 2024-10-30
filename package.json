@@ -1,0 +1,20 @@
+{
+  "name": "telegram-partner-bot",
+  "version": "1.0.0",
+  "description": "automate the creation and management of Telegram groups.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha src/tests/test_main.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "input": "^0.0.12",
+    "telegram": "^1.8.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  },
+  "author": "axol-io",
+  "license": "MIT"
+}
