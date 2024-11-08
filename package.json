@@ -1,7 +1,7 @@
 {
   "name": "telegram-partner-bot",
   "version": "1.0.0",
-  "description": "automate the creation and management of Telegram groups.",
+  "description": "auto-create and manage Telegram partnership groups.",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
